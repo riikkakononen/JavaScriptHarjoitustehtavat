@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtava 4</title>
+</head>
+<body>
+    <h1>Sorting hat</h1>
+    <script>
+    let name = prompt("What's your name?");
+
+    let draw = Math.floor(Math.random() * 4) + 1;
+
+    let house = "";
+
+    switch (draw) {
+        case 1:
+            house = "Gryffindor";
+            break;
+        case 2:
+            house = "Slytherin";
+            break;
+        case 3:
+            house = "Hufflepuff";
+            break;
+        case 4:
+            house = "Ravenclaw";
+            break;
+        default:
+            house = "Not known";
+    }
+
+    document.write("<p>" + name + ", you are " + house + ".</p>");
+
+    </script>
+</body>
+</html>

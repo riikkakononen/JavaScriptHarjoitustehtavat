@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtava 5</title>
+</head>
+<body>
+    <h1>Leap year or not</h1>
+    <script>
+        let year = parseInt(prompt("Give a year: "));
+
+        let leapyear = false;
+
+        if (year % 4 === 0) {
+            if (year % 100 === 0) {
+                if (year % 400 === 0) {
+                    leapyear = true;
+                } else {
+                    leapyear = false;
+                }
+            } else {
+                leapyear = true
+            }
+        }
+
+        if (leapyear) {
+            document.write("<p>" + year + " is a leapyear.</p>");
+        } else {
+            document.write("<p>" + year + " is not a leapyear.</p>");
+        }
+
+    </script>
+</body>
+</html>
