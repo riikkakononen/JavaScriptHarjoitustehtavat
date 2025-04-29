@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtava 5</title>
+</head>
+<body>
+    <script>
+        let numbers = [];
+        let input;
+
+        while (true) {
+            input = Number(prompt("Enter a number:"));
+
+            if (numbers.includes(input)) {
+                alert("You already entered this number! Program will stop.");
+                break;
+            }
+
+            numbers.push(input);
+        }
+
+        // Organizing in ascending order
+        numbers.sort(function (a, b) {
+            return a - b;
+        });
+
+        console.log("Numbers in ascending order:");
+        console.log(numbers);
+    </script>
+</body>
+</html>

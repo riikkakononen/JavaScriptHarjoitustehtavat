@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtava 2</title>
+</head>
+<body>
+    <div id="participantsList"></div>
+    <script>
+        // The number of the participants
+        let count = prompt("Enter the number of participants:");
+        count = Number(count);
+
+        // Saving to an array
+        let participants = [];
+
+        // The names of the participants
+        for (let i = 0; i < count; i++) {
+            let name = prompt(`Enter the name of participant ${i + 1}:`);
+            participants.push(name);
+        }
+
+        // Arranging the names alphabetically
+        participants.sort();
+
+        // Creating the <ol> element
+        let ol = document.createElement("ol");
+
+        // Adding the names to the list
+        for (let i = 0; i < participants.length; i++) {
+            let li = document.createElement("li");
+            li.textContent = participants[i];
+            ol.appendChild(li);
+        }
+
+        // Adding the list on the website
+        document.getElementById("participantsList").appendChild(ol);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtava 4</title>
+</head>
+<body>
+    <script>
+        let numbers = [];
+        let input;
+
+        // Asking numbers until 0 is given
+        do {
+            input = Number(prompt("Enter a number (0 to stop):"));
+            if (input !==0) {
+                numbers.push(input);
+            }
+        } while (input !==0);
+
+        // Organizing numbers from largest to smallest
+        numbers.sort(function (a, b) {
+          return b - a;
+        });
+
+        console.log("Numbers from largest to smallest:");
+        console.log(numbers);
+    </script>
+</body>
+</html>
